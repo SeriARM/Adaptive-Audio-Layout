@@ -16,7 +16,7 @@ class AudioHelper: NSObject {
         // Create a player member
         self.player = AVPlayer(playerItem: item)
         
-        // Init superclass members
+        // Init superclass members 
         super.init()
     }
     
