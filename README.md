@@ -2,7 +2,7 @@
 
 This challenge allows you to practice the concepts and techniques learned in today's guided lesson and apply them in a concrete project. Your lesson explored Auto Layout. You demonstrate proficiency by creating an application that showcases the same features you learned in class.
 
-## Instructions
+## Instructions 
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Challenge.**
 
