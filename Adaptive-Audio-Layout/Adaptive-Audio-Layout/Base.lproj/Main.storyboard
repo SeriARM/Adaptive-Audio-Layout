@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="32f-mw-JC4">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,24 +11,114 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="MNY-Xd-EKS">
+            <objects>
+                <viewController id="WuZ-yO-lxh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zWF-DM-DaR">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="vintage-technology-music-old" translatesAutoresizingMaskIntoConstraints="NO" id="etX-0A-WkS">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="etX-0A-WkS" secondAttribute="height" multiplier="16:20" id="CCW-qY-gQS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CCW-qY-gQS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="CCW-qY-gQS"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiS-Pl-A2x">
+                                <rect key="frame" x="0.0" y="51" width="959" height="32"/>
+                                <items>
+                                    <barButtonItem systemItem="flexibleSpace" id="OY0-xc-Fvi"/>
+                                    <barButtonItem systemItem="play" id="LBS-r7-KBv"/>
+                                    <barButtonItem width="42" systemItem="fixedSpace" id="Jof-qL-HxV"/>
+                                    <barButtonItem enabled="NO" systemItem="pause" id="91p-PV-FZw"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="tcv-iW-FzS"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lambda Radio FM: Voice of the Future" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="AfY-n3-wJi">
+                                <rect key="frame" x="320" y="113.5" width="347" height="148.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="etX-0A-WkS" firstAttribute="leading" secondItem="OXn-QB-MVl" secondAttribute="leading" id="6xH-QG-gua"/>
+                            <constraint firstItem="etX-0A-WkS" firstAttribute="top" secondItem="OXn-QB-MVl" secondAttribute="top" id="80v-SQ-lMG"/>
+                            <constraint firstItem="fiS-Pl-A2x" firstAttribute="trailing" secondItem="OXn-QB-MVl" secondAttribute="trailing" id="DSB-tc-nUO"/>
+                            <constraint firstItem="fiS-Pl-A2x" firstAttribute="bottom" secondItem="OXn-QB-MVl" secondAttribute="bottom" id="L55-GT-hko">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="AfY-n3-wJi" firstAttribute="trailing" secondItem="OXn-QB-MVl" secondAttribute="trailing" constant="20" id="Sim-vW-nhR">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="AfY-n3-wJi" firstAttribute="centerY" secondItem="etX-0A-WkS" secondAttribute="centerY" id="gRm-by-l9k"/>
+                            <constraint firstItem="fiS-Pl-A2x" firstAttribute="leading" secondItem="OXn-QB-MVl" secondAttribute="leading" id="lAl-lb-faD"/>
+                            <constraint firstItem="etX-0A-WkS" firstAttribute="bottom" secondItem="OXn-QB-MVl" secondAttribute="bottom" id="pVH-29-aRa"/>
+                            <constraint firstItem="AfY-n3-wJi" firstAttribute="leading" secondItem="etX-0A-WkS" secondAttribute="trailing" constant="20" id="x1p-qk-HeR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OXn-QB-MVl"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6xH-QG-gua"/>
+                                <exclude reference="80v-SQ-lMG"/>
+                                <exclude reference="pVH-29-aRa"/>
+                                <exclude reference="Sim-vW-nhR"/>
+                                <exclude reference="gRm-by-l9k"/>
+                                <exclude reference="x1p-qk-HeR"/>
+                                <exclude reference="DSB-tc-nUO"/>
+                                <exclude reference="L55-GT-hko"/>
+                                <exclude reference="lAl-lb-faD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="6xH-QG-gua"/>
+                                <include reference="80v-SQ-lMG"/>
+                                <include reference="pVH-29-aRa"/>
+                                <include reference="Sim-vW-nhR"/>
+                                <include reference="gRm-by-l9k"/>
+                                <include reference="x1p-qk-HeR"/>
+                                <include reference="DSB-tc-nUO"/>
+                                <include reference="L55-GT-hko"/>
+                                <include reference="lAl-lb-faD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4oe-C1-e81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-956" y="-47"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="fP2-Ze-uqi">
             <objects>
                 <viewController id="32f-mw-JC4" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VNm-Qz-DNq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eNe-av-l8h">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-ld-4hC">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vintage-technology-music-old" translatesAutoresizingMaskIntoConstraints="NO" id="dKT-CO-O1h">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="291.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="323.5" height="343"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Lambda Radio FM: Voice of the Future" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="H1v-IS-2wd">
-                                                <rect key="frame" x="0.0" y="311.5" width="375" height="291.5"/>
+                                                <rect key="frame" x="343.5" y="0.0" width="323.5" height="343"/>
                                                 <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -37,7 +127,7 @@
                                         <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihv-pA-3Xg">
-                                        <rect key="frame" x="0.0" y="603" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="343" width="667" height="32"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="vbL-UY-j63"/>
                                             <barButtonItem systemItem="play" id="vVv-n5-f5j">
@@ -77,7 +167,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pua-M7-P7z" sceneMemberID="firstResponder"/>
                 <customObject id="ctY-x4-df5" customClass="AudioHelper" customModule="AutoLayout" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="52.989130434782609" y="128.98550724637681"/>
+            <point key="canvasLocation" x="390" y="77"/>
         </scene>
     </scenes>
     <resources>
