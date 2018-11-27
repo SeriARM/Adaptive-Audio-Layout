@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="32f-mw-JC4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WuZ-yO-lxh">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="MNY-Xd-EKS">
             <objects>
-                <viewController id="WuZ-yO-lxh" sceneMemberID="viewController">
+                <viewController id="WuZ-yO-lxh" customClass="ViewController" customModule="Adaptive_Audio_Layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zWF-DM-DaR">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,12 +35,20 @@
                                 </variation>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiS-Pl-A2x">
-                                <rect key="frame" x="0.0" y="51" width="959" height="32"/>
+                                <rect key="frame" x="0.0" y="343" width="667" height="32"/>
                                 <items>
                                     <barButtonItem systemItem="flexibleSpace" id="OY0-xc-Fvi"/>
-                                    <barButtonItem systemItem="play" id="LBS-r7-KBv"/>
+                                    <barButtonItem systemItem="play" id="LBS-r7-KBv">
+                                        <connections>
+                                            <action selector="play:" destination="WuZ-yO-lxh" id="v1o-vn-BhA"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" systemItem="fixedSpace" id="Jof-qL-HxV"/>
-                                    <barButtonItem enabled="NO" systemItem="pause" id="91p-PV-FZw"/>
+                                    <barButtonItem enabled="NO" systemItem="pause" id="91p-PV-FZw">
+                                        <connections>
+                                            <action selector="pause:" destination="WuZ-yO-lxh" id="588-ix-6Yi"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="tcv-iW-FzS"/>
                                 </items>
                             </toolbar>
@@ -95,79 +103,16 @@
                             </mask>
                         </variation>
                     </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4oe-C1-e81" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-956" y="-47"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fP2-Ze-uqi">
-            <objects>
-                <viewController id="32f-mw-JC4" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VNm-Qz-DNq">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eNe-av-l8h">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-ld-4hC">
-                                        <rect key="frame" x="0.0" y="0.0" width="667" height="343"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vintage-technology-music-old" translatesAutoresizingMaskIntoConstraints="NO" id="dKT-CO-O1h">
-                                                <rect key="frame" x="0.0" y="0.0" width="323.5" height="343"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Lambda Radio FM: Voice of the Future" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" translatesAutoresizingMaskIntoConstraints="NO" id="H1v-IS-2wd">
-                                                <rect key="frame" x="343.5" y="0.0" width="323.5" height="343"/>
-                                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="35"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <variation key="heightClass=compact" axis="horizontal"/>
-                                    </stackView>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihv-pA-3Xg">
-                                        <rect key="frame" x="0.0" y="343" width="667" height="32"/>
-                                        <items>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="vbL-UY-j63"/>
-                                            <barButtonItem systemItem="play" id="vVv-n5-f5j">
-                                                <connections>
-                                                    <action selector="play:" destination="32f-mw-JC4" id="hbf-Ip-rbT"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="x6P-x0-BTO"/>
-                                            <barButtonItem enabled="NO" systemItem="pause" id="LOm-b8-Zee">
-                                                <connections>
-                                                    <action selector="pause:" destination="32f-mw-JC4" id="hIg-os-8jX"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Mal-qQ-IYb"/>
-                                        </items>
-                                    </toolbar>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="eNe-av-l8h" firstAttribute="bottom" secondItem="6gs-TE-DZf" secondAttribute="bottom" id="ADe-Nk-hPQ"/>
-                            <constraint firstItem="eNe-av-l8h" firstAttribute="top" secondItem="6gs-TE-DZf" secondAttribute="top" id="QQ9-1o-vFl"/>
-                            <constraint firstAttribute="trailing" secondItem="eNe-av-l8h" secondAttribute="trailing" id="VOK-TQ-tcc"/>
-                            <constraint firstItem="eNe-av-l8h" firstAttribute="leading" secondItem="6gs-TE-DZf" secondAttribute="leading" id="iWk-m3-Xmh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6gs-TE-DZf"/>
-                    </view>
                     <connections>
-                        <outlet property="pause" destination="LOm-b8-Zee" id="Uie-Ib-JN8"/>
-                        <outlet property="pauseButton" destination="LOm-b8-Zee" id="EYX-1s-feX"/>
-                        <outlet property="play" destination="vVv-n5-f5j" id="0YK-z6-wHW"/>
-                        <outlet property="playButton" destination="vVv-n5-f5j" id="8Ga-LV-gn9"/>
-                        <outlet property="player" destination="ctY-x4-df5" id="gZ3-1u-Ws1"/>
+                        <outlet property="pauseButton" destination="91p-PV-FZw" id="8Ln-Oh-7qP"/>
+                        <outlet property="playButton" destination="LBS-r7-KBv" id="Xpi-vd-Fwb"/>
+                        <outlet property="player" destination="FDn-Ny-0mK" id="2mb-Q9-tWP"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pua-M7-P7z" sceneMemberID="firstResponder"/>
-                <customObject id="ctY-x4-df5" customClass="AudioHelper" customModule="AutoLayout" customModuleProvider="target"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4oe-C1-e81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="FDn-Ny-0mK" customClass="AudioHelper" customModule="Adaptive_Audio_Layout" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="390" y="77"/>
+            <point key="canvasLocation" x="-956" y="-47"/>
         </scene>
     </scenes>
     <resources>
