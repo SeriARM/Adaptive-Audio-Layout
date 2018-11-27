@@ -13,7 +13,7 @@ class AudioHelper: NSObject {
         let asset = AVAsset(url: url)
         let item = AVPlayerItem(asset: asset)
         
-        // Create a player member
+        // Create a player member 
         self.player = AVPlayer(playerItem: item)
         
         // Init superclass members 
